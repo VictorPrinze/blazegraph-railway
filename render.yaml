@@ -7,8 +7,8 @@ services:
     envVars:
       - key: PORT
         value: 10000
-    healthCheckPath: /blazegraph/#query
     disk:
       name: data
       mountPath: /data
       sizeGB: 1
+    healthCheckPath: /blazegraph
