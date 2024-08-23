@@ -8,5 +8,4 @@ RUN curl -L https://github.com/blazegraph/database/releases/download/BLAZEGRAPH_
 
 EXPOSE 9999
 
-CMD ["java", "-server", "-Xmx4g", "-jar", "blazegraph.jar"]
-
+CMD ["sh", "-c", "java -server -Xmx512m -Djetty.port=${PORT} -jar blazegraph.jar"]

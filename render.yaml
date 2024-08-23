@@ -4,4 +4,7 @@ services:
     env: docker
     plan: free
     dockerfilePath: ./Dockerfile
-    dockerCommand: java -server -Xmx512m -jar blazegraph.jar
+    envVars:
+      - key: PORT
+        value: 9999
+    healthCheckPath: /status
