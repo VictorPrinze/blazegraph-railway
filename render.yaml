@@ -1,0 +1,7 @@
+services:
+  - type: web
+    name: blazegraph
+    env: docker
+    plan: free
+    dockerfilePath: ./Dockerfile
+    dockerCommand: java -server -Xmx512m -jar blazegraph.jar
